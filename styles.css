@@ -1,0 +1,77 @@
+/* CSS Variables for Dynamic Theme Switching */
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: #212529;
+  --bg-secondary: #f8f9fa;
+  --nav-bg: #ffffff;
+  --card-bg: #ffffff;
+}
+
+body.dark-mode {
+  --bg-primary: #121212;
+  --text-primary: #e0e0e0;
+  --bg-secondary: #1e1e1e;
+  --nav-bg: #1f1f1f;
+  --card-bg: #2a2a2a;
+}
+
+/* Base Styles & Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.style-max-width {
+  max-width: 600px;
+}
+
+.bg-light-custom {
+  background-color: var(--bg-secondary);
+}
+
+.custom-navbar {
+  background-color: var(--nav-bg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.dark-mode .card {
+  border-color: #333;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1) !important;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid #0d6efd;
+}
+
+/* Back to Top Button Styling */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  display: none;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
